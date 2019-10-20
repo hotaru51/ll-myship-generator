@@ -1,2 +1,8 @@
-<h1>Ships#new</h1>
-<p>Find me in app/views/ships/new.html.erb</p>
+<%=form_with url: ships_path, model: @ship, local: true do |form| %>
+<label>選ばれた組み合わせ</label>
+<%=form.hidden_field :ship_name %>
+<p><%=@ship[:ship_name] %></p>
+<label>コメント</label>
+<%=form.text_area :comment, class: 'u-full-width' %>
+<%=form.submit '送信', class: 'button button-primary' %>
+<% end %>

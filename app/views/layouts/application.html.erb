@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LlMyshipGenerator</title>
+    <title>MyShipGenerator</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class=container>
+      <header>
+        <h1>MyShipGenerator</h1>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>

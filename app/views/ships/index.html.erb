@@ -1,2 +1,19 @@
-<h1>Ships#index</h1>
-<p>Find me in app/views/ships/index.html.erb</p>
+<p>μ's、Aqours、虹学のメンバーからランダムに2人の組み合わせを作ります。</p>
+<%=link_to 'Generate', ships_new_path,  class: 'button button-primary' %>
+<table class="u-full-width">
+  <tr>
+    <th>no</th>
+    <th>name</th>
+    <th></th>
+  </tr>
+  <% @ships.each do |ship| %>
+  <tr>
+    <td><%=ship[:id] %></td>
+    <td><%=ship[:ship_name]%></td>
+    <td>
+      <input type="button" class="button" value="詳細" >
+      <input type="button" class="button" value="削除" >
+    </td>
+  </tr>
+  <% end %>
+</table>
